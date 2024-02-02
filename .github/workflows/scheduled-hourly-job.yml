@@ -12,6 +12,13 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+    
+    - name: Verify curl, sed, grep, awk
+        run:|
+          which curl
+          which sed
+          which grep
+          which awk
+          
     - name: Run script
       run: ./rx_poc_hourly.sh
