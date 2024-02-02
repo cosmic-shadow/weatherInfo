@@ -14,6 +14,12 @@ hour=$(TZ="Africa/Casablanca" date | grep -oE '(\d\d:\d\d).*(\+\d\d)')
 
 # It prints the reports
 echo -e "\n### In the city of $city on $month $day of $year at $hour the observed temperature is $obs_temp and the forecasted temperature for tomorrow at noon is $fc_temp ###"
+echo $year
+echo $month
+echo $day
+echo $hour
+echo $obs_temp
+echo $fc_temp
 
 #Send values and append them to log
 record=$(echo -e "$year\t$month\t$day\t$hour\t$obs_temp\t$fc_temp")
