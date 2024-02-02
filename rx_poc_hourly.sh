@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Enable debugging
+set -x
+
 ## This script access an online weather report from wttr.in and extracts the observed and forecasted temperature at noon local time
 # Defines the city variable for the weather report
 city=Casablanca
@@ -21,6 +24,8 @@ echo $hour
 echo $obs_temp
 echo $fc_temp
 
+# Disable debugging
+set +x
 #Send values and append them to log
 record=$(echo -e "$year\t$month\t$day\t$hour\t$obs_temp\t$fc_temp")
 echo $record >> rx_poc_hourly.log
