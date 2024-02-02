@@ -1,0 +1,17 @@
+name: Scheduled Job
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Schedule at every hour of the day PM UTC
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run script
+      run: |
+        /weatherInfo/rx_poc_hourly.sh
