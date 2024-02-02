@@ -12,6 +12,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Set working directory
+      run: cd /weatherInfo/
+
     - name: Run script
-      run: |
-        /weatherInfo/rx_poc_hourly.sh
+      run: ./rx_poc_hourly.sh
