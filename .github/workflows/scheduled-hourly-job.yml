@@ -1,4 +1,4 @@
-name: Scheduled Job
+name: Scheduled Job for Hourly Weather Log
 
 on:
   schedule:
