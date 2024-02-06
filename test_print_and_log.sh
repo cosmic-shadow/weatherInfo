@@ -5,3 +5,6 @@
 message="--> Does this work?"
 current_date=$(date)
 echo "$current_date $message"
+
+# Append values to log
+echo $record >> print_message.log
