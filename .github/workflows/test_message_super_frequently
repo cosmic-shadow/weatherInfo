@@ -2,7 +2,7 @@ name: Scheduled Job Just for Today
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  #
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
