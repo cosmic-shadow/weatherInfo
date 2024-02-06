@@ -1,4 +1,4 @@
-name: Scheduled Job for Hourly Weather Log
+name: Scheduled Job Just for Today
 
 on:
   schedule:
