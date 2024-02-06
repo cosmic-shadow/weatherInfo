@@ -17,7 +17,7 @@ jobs:
       run: ./test_print_and_log.sh | tee print_message.log
 
     - name: Upload Log File
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: logs
         path: print_message.log
