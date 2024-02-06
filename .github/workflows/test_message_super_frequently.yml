@@ -16,4 +16,4 @@ jobs:
     - name: Run script and append output to file
       run: |
         ./test_print_and_log.sh
-      working-directory: $GITHUB_WORKSPACE/print_message.log
+      working-directory: $ {{GITHUB_WORKSPACE }}
