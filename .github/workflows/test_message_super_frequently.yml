@@ -13,11 +13,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     
-    - name: Run script and log output
-      run: ./test_print_and_log.sh | tee print_message.log
+    - name: Run script and append output to file
+      run: |
+        ./test_print_and_log.sh | tee -a $GITHUB_WORKSPACE/print_message.log
 
     - name: Upload Log File
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v2
       with:
         name: logs
         path: print_message.log
