@@ -13,7 +13,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     
-    - name: Run script
+    - name: Run script and log output
       run: ./test_print_and_log.sh | tee print_message.log
 
     - name: Upload Log File
