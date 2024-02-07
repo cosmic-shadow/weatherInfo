@@ -5,7 +5,7 @@
 message="Does this work?"
 current_date=$(date)
 echo "$current_date $message"
-result="$current_date $message"
+# result="$current_date $message"
 
 # Append values to log
-echo "$result" >> print_message.log
+# echo "$result" >> print_message.log
