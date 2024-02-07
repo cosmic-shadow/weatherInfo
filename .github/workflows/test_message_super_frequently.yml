@@ -15,4 +15,13 @@ jobs:
     
     - name: Run script and append output to file
       run: |
-        ./test_print_and_log.sh
+        script_output=$(./test_print_and_log.sh)
+        echo $script_output >> print_message.log
+        echo "$script_output"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+      
