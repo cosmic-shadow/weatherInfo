@@ -2,7 +2,7 @@ name: Scheduled Job
 
 on:
   schedule:
-    - cron: '* 11 * * *'  # Schedule at 12 PM UTC
+    - cron: '1 11 1 * *'  # Schedule at 12 PM UTC
 
 jobs:
   run-script:
