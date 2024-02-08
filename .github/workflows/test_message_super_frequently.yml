@@ -19,9 +19,15 @@ jobs:
         echo $script_output >> print_message.log
         echo "$script_output"
 
-    - name: Push changes
+    - name: Commit and push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        run: | 
+          git commit -am "Automated report"
+          git push
+        
+        
+      
       
       
