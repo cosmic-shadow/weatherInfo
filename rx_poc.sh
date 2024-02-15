@@ -17,5 +17,5 @@ echo -e "\n### In the city of $city on $month $day of $year at $hour the observe
 
 #Send values and append them to log
 record=$(echo -e "$year\t$month\t$day\t$hour\t$obs_temp\t$fc_temp")
-echo $record >> rx_poc.log
+# echo $record >> rx_poc.log
 echo "End"
